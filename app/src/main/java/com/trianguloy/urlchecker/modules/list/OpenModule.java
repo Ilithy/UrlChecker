@@ -305,7 +305,7 @@ class OpenDialog extends AModuleDialog implements View.OnClickListener, PopupMen
             clipboard.setPrimaryClip(clip);
             clipData.apply {
         description.extras = PersistableBundle().apply {
-        putBoolean("android.content.extra.IS_SENSITIVE", true)
+        putBoolean(ClipDescription.EXTRA_IS_SENSITIVE, true)
     }
 }
             Toast.makeText(getActivity(), R.string.mOpen_clipboard, Toast.LENGTH_LONG).show();
