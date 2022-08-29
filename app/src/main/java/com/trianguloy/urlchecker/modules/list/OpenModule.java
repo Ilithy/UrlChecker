@@ -303,8 +303,11 @@ class OpenDialog extends AModuleDialog implements View.OnClickListener, PopupMen
         ClipData clip = ClipData.newPlainText("", getUrl());
         if (clipboard != null) {
             clipboard.setPrimaryClip(clip);
-        // Only show a toast for Android 12L and lower.
-          if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.S_V2);
+            clipData.apply {
+        description.extras = PersistableBundle().apply {
+        putBoolean("android.content.extra.IS_SENSITIVE", true)
+    }
+}
             Toast.makeText(getActivity(), R.string.mOpen_clipboard, Toast.LENGTH_LONG).show();
         }
     }
