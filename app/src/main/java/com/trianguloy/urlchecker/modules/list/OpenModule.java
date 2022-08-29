@@ -301,10 +301,10 @@ class OpenDialog extends AModuleDialog implements View.OnClickListener, PopupMen
     private void copyToClipboard() {
         ClipboardManager clipboard = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
         ClipData clip = ClipData.newPlainText("", getUrl());
-        // Only show a toast for Android 12L and lower.
-        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.S_V2)
-          if (clipboard != null) {
+        if (clipboard != null) {
             clipboard.setPrimaryClip(clip);
+        // Only show a toast for Android 12L and lower.
+          if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.S_V2)
             Toast.makeText(getActivity(), R.string.mOpen_clipboard, Toast.LENGTH_LONG).show();
         }
     }
