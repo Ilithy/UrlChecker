@@ -303,11 +303,8 @@ class OpenDialog extends AModuleDialog implements View.OnClickListener, PopupMen
         ClipData clip = ClipData.newPlainText("", getUrl());
         if (clipboard != null) {
             clipboard.setPrimaryClip(clip);
-            clipData.apply {
         description.extras = PersistableBundle().apply {
         putBoolean(ClipDescription.EXTRA_IS_SENSITIVE, true)
-    }
-}
             Toast.makeText(getActivity(), R.string.mOpen_clipboard, Toast.LENGTH_LONG).show();
         }
     }
