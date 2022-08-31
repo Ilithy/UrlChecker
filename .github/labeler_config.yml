@@ -1,0 +1,17 @@
+version: 1
+labels:
+  - label: "gradle"
+    files:
+      - "gradle/.*"
+      - ".*.gradle"
+      - ".*.gradle.kts"
+      - "buildSrc/.*"
+      - "gradle.properties"
+      - "gradlew"
+  - label: "Ongoing translation"
+    files:
+      - "values/.*"
+      - ".*.strings.xml"
+  - label: "wiki"
+    files:
+      - "wiki/.*"
