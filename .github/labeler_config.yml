@@ -1,8 +1,10 @@
 # version: 1
 
-# Add 'Ongoing translation' label to any change within the 'language' files
+# Add 'Ongoing translation' label to any change within the 'strings.xml' files
 
 Ongoing translation:
+
+- src/**/*.strings.xml
 
 - app/src/main/res/values-uk/*
 
