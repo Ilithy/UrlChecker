@@ -16,7 +16,7 @@ jobs:
       pull-requests: write
 
     steps:
-    - uses: srvaroa/labeler@v0.8
+    - uses: srvaroa/labeler@v0.9
       with:
           config_path: .github/labeler_config.yml
       env:
