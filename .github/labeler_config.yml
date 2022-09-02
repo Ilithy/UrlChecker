@@ -6,7 +6,7 @@ Ongoing translation:
 - app/src/main/**/*.default.txt
 - app/src/main/res/values-fr-rFR/strings.xml
 
-# Add 'frontend` label to any change to *.js files as long as the `main.js` hasn't changed
-frontend:
+# Add 'Ongoing translation' label to any change to *.xml files as long as the `values/strings.xml` hasn't changed
+Ongoing translation:
 - any: ['values-fr-rFR/*.xml']
   all: ['!values/strings.xml']
