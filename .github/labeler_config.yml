@@ -1,17 +1,6 @@
-version: 1
-labels:
-  - label: "gradle"
-    files:
-      - "gradle/.*"
-      - ".*.gradle"
-      - ".*.gradle.kts"
-      - "buildSrc/.*"
-      - "gradle.properties"
-      - "gradlew"
-  - label: "Ongoing translation"
-    files:
-      - "values/.*"
-      - ".*.strings.xml"
-  - label: "wiki"
-    files:
-      - "wiki/.*"
+# version: 1
+
+# Add 'Ongoing translation' label to any change to *.strings.xml and *default.txt files within the source dir
+Ongoing translation:
+- app/src/main/**/*.strings.xml
+- app/src/main/**/*.default.txt
