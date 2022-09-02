@@ -4,3 +4,4 @@
 Ongoing translation:
 - app/src/main/**/*.strings.xml
 - app/src/main/**/*.default.txt
+- app/src/main/res/values-fr-rFR/strings.xml
