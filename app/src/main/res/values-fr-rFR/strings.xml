@@ -1,6 +1,5 @@
 <resources>
     <!-- main -->
-    <string name="app_name">Url checker</string>
     <string name="txt_info">Cette application agit comme une étape intermédiaire pour l\'ouverture de liens URL. Lorsque vous cliquez sur un lien et choisissez cette application pour l\'ouvrir, une boîte de dialogue contenant des informations sur le lien s\'affiche. Appuyez sur le bouton Module ci-dessous pour vérifier et configurer tous les modules disponibles.</string>
     <string name="txt_sample">Appuyez sur le lien ci-dessous pour la tester:</string>
     <string name="a_modules">Modules</string>
@@ -153,7 +152,10 @@ Si vous l'activez, il affichera l'intention reçue sous forme d'URI, utile pour 
     <string name="mClear_hashHint">Pas de vérification du hachage</string>
     <string name="mClear_updateNow">Mettre à jour maintenant</string>
     <string name="mClear_autoUpdate">Mettre à jour périodiquement</string>
+    <string name="mClear_lastCheck">Dernière vérification:</string>
+    <string name="mClear_lastUpdate">Dernière mise à jour:</string>
     <string name="mClear_updated">Catalogue actualisé</string>
+    <string name="mClear_upToDate">Catalogue à jour</string>
     <string name="mClear_urlError">Impossible de récupérer les règles, assurez-vous que l\'URL est valide et que vous disposez d\'une connexion active</string>
     <string name="mClear_hashError">Impossible de récupérer le hachage, assurez-vous que l\'URL est valide et que vous disposez d\'une connexion active</string>
     <string name="mClear_hashMismatch">Les hachages ne correspondent pas, le fichier a peut-être été falsifié. Si vous souhaitez ignorer la vérification, supprimez l\'URL de hachage</string>

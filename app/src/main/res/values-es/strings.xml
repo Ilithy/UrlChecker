@@ -1,6 +1,5 @@
 <resources>
     <!-- main -->
-    <string name="app_name">Analizador de Urls</string>
     <string name="txt_info">"Esta aplicación actúa como un paso intermedio al abrir enlaces. Al hacer click en uno y abrirlo en esta aplicación, se mostrará una ventana con información acerca del enlace. Pulsa el botón 'Módulos' de debajo para ver y configurar los módulos disponibles."</string>
     <string name="txt_sample">Pulsa el enlace de debajo para probar la app:</string>
     <string name="a_modules">Módulos</string>
@@ -152,7 +151,10 @@ Si lo habilitas, mostrará el intent recibido como uri, útil para desarrollador
     <string name="mClear_hashHint">No comprobar hash</string>
     <string name="mClear_updateNow">Actualizar ahora</string>
     <string name="mClear_autoUpdate">Actualizar regularmente</string>
+    <string name="mClear_lastCheck">Última comprobación:</string>
+    <string name="mClear_lastUpdate">Última actualización:</string>
     <string name="mClear_updated">Catálogo actualizado</string>
+    <string name="mClear_upToDate">Sin cambios</string>
     <string name="mClear_urlError">No se han podido descargar las reglas, comprueba que la url es correcta y que tienes acceso a internet</string>
     <string name="mClear_hashError">No se ha podido descargar el hash, comprueba que la url es correcta y que tienes acceso a internet</string>
     <string name="mClear_hashMismatch">Los hashes no coinciden, el catálogo puede haber sido alterado. Si quieres desactivar la comprobación de hash borra la url de hash</string>
