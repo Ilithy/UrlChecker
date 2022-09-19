@@ -19,5 +19,5 @@ jobs:
     - uses: srvaroa/labeler@v0.8
       with:
         configuration-path: .github/labeler_config.yml
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        sync-labels: "true"
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        sync-labels: true
