@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 30
+    namespace 'com.trianguloy.urlchecker'
+    compileSdkVersion 32
     defaultConfig {
         applicationId "com.trianguloy.urlchecker"
         minSdkVersion 14
-        targetSdkVersion 30
+        targetSdkVersion 32
         versionCode 16
         versionName "2.7"
     }
@@ -23,7 +24,7 @@ android {
         }
     }
 
-    lintOptions {
+    lint {
         // users are free to update translations whenever
         // this mean that they are not usually up to date
         // and that there are usually lots of missing translations
