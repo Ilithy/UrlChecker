@@ -1,5 +1,7 @@
 package com.trianguloy.urlchecker.dialogs;
 
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -7,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,55 +31,10 @@ import java.util.List;
  */
 public class MainDialog extends Activity {
 
-    // ------------------- module functions -------------------
-
     /**
      * Maximum number of updates to avoid loops
      */
     private static final int MAX_UPDATES = 100;
-
-    /**
-     * to allow changing url while notifying
-     */
-    private int updating = 0;
-
-    /**
-     * A module (null if first change) want to set a new url. Return true if set, false if not.
-     */
-    public boolean onNewUrl(UrlData urlData, AModuleDialog providerModule) {
-        if (updating > MAX_UPDATES) return false;
-
-        // change url (merge if not the first)
-        if (updating != 0) urlData.mergeData(this.urlData);
-        this.urlData = urlData;
-
-        // test and mark recursion
-        if (urlData.disableUpdates) updating = MAX_UPDATES;
-        updating++;
-        int updating_current = updating;
-
-        // and notify the other modules
-        for (AModuleDialog module : modules) {
-            // skip own if required
-            if (!urlData.triggerOwn && module == providerModule) continue;
-            try {
-                module.onNewUrl(urlData);
-            } catch (Exception e) {
-                e.printStackTrace();
-                AndroidUtils.assertError("Exception in onNewUrl for module " + (providerModule == null ? "-none-" : providerModule.getClass().getName()));
-            }
-            if (updating_current != updating) return true;
-        }
-        updating = 0;
-        return true;
-    }
-
-    /**
-     * @return the current url
-     */
-    public String getUrl() {
-        return urlData.url;
-    }
 
     // ------------------- data -------------------
 
@@ -84,8 +43,75 @@ public class MainDialog extends Activity {
      */
     private final List<AModuleDialog> modules = new ArrayList<>();
 
-    // the current url
+    /**
+     * The current url
+     */
     private UrlData urlData = new UrlData("");
+
+    /**
+     * Represents how many url were updated previously.
+     * To allow changing url while notifying
+     */
+    private int updating = 0;
+
+    /**
+     * Data about the next update to apply
+     */
+    private UrlData nextUpdate = null;
+
+    // ------------------- module functions -------------------
+
+    /**
+     * Something wants to set a new url.
+     */
+    public void onNewUrl(UrlData urlData) {
+        // mark as next if nothing else yet
+        if (nextUpdate == null) nextUpdate = urlData;
+
+        // check if already updating
+        if (updating != 0) {
+            // yes, merge
+            urlData.mergeData(this.urlData);
+            // and exit (the fire updates loop below will take it)
+            return;
+        }
+
+        // fire updates loop
+        while (updating < MAX_UPDATES && nextUpdate != null) {
+            // prepare next update
+            this.urlData = nextUpdate;
+            nextUpdate = null;
+
+            // test and mark looping times
+            if (this.urlData.disableUpdates) updating = MAX_UPDATES;
+            else updating++;
+
+            // now notify the other modules
+            for (AModuleDialog module : modules) {
+                // skip own if required
+                if (!this.urlData.triggerOwn && module == this.urlData.trigger) continue;
+
+                try {
+                    // notify
+                    module.onNewUrl(this.urlData);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    AndroidUtils.assertError("Exception in onNewUrl for module " + module.getClass().getName());
+                }
+            }
+        }
+
+        // end, reset
+        updating = 0;
+        nextUpdate = null;
+    }
+
+    /**
+     * Return the current url
+     */
+    public String getUrl() {
+        return urlData.url;
+    }
 
     // ------------------- initialize -------------------
 
@@ -106,7 +132,7 @@ public class MainDialog extends Activity {
         initializeModules();
 
         // load url
-        onNewUrl(new UrlData(getOpenUrl()), null);
+        onNewUrl(new UrlData(getOpenUrl()));
     }
 
     /**
@@ -114,11 +140,17 @@ public class MainDialog extends Activity {
      */
     private void initializeModules() {
         modules.clear();
+        ll_mods.removeAllViews();
 
         // add
         final List<AModuleData> middleModules = ModuleManager.getModules(false, this);
         for (AModuleData module : middleModules) {
             initializeModule(module);
+        }
+
+        // avoid empty
+        if (ll_mods.getChildCount() == 0) {
+            ll_mods.addView(egg());
         }
     }
 
@@ -143,14 +175,14 @@ public class MainDialog extends Activity {
 
                 ViewGroup parent;
                 // set module block
-                if (moduleData.canBeDisabled()) {
+                if (moduleData.showDecorations()) {
                     // init decorations
                     View block = Inflater.inflate(R.layout.dialog_module, ll_mods, this);
                     final TextView title = block.findViewById(R.id.title);
                     title.setText(getString(R.string.dd, getString(moduleData.getName())));
                     parent = block.findViewById(R.id.mod);
                 } else {
-                    // non-disable modules are considered internal and won't show decorations
+                    // no decorations
                     parent = ll_mods;
                 }
 
@@ -176,7 +208,7 @@ public class MainDialog extends Activity {
     }
 
     /**
-     * @return the url that this activity was opened with (intent uri or sent text)
+     * Returns the url that this activity was opened with (intent uri or sent text)
      */
     private String getOpenUrl() {
         // get the intent
@@ -210,5 +242,47 @@ public class MainDialog extends Activity {
         finish();
         return null;
     }
+
+    /* ------------------- its a secret! ------------------- */
+
+    /**
+     * To be set when there is no module displayed
+     */
+    private View egg() {
+        var frame = new FrameLayout(this);
+
+        var contentA = new ImageView(this);
+        contentA.setImageResource(R.mipmap.ic_launcher);
+        frame.addView(contentA);
+        var a1 = ObjectAnimator.ofFloat(contentA, "rotation", 0, 360);
+        a1.setDuration((long) (4000 + Math.random() * 2000));
+        a1.setInterpolator(null);
+        a1.setRepeatCount(ValueAnimator.INFINITE);
+        a1.start();
+        var a2 = ObjectAnimator.ofFloat(contentA, "alpha", 1, 0);
+        a2.setDuration((long) (4000 + Math.random() * 2000));
+        a2.setInterpolator(null);
+        a2.setRepeatCount(ValueAnimator.INFINITE);
+        a2.setRepeatMode(ValueAnimator.REVERSE);
+        a2.start();
+
+        var contentB = new ImageView(this);
+        contentB.setImageResource(R.drawable.trianguloy);
+        frame.addView(contentB);
+        var b1 = ObjectAnimator.ofFloat(contentB, "rotation", 360, 0);
+        b1.setDuration((long) (4000 + Math.random() * 2000));
+        b1.setInterpolator(null);
+        b1.setRepeatCount(ValueAnimator.INFINITE);
+        b1.start();
+        var b2 = ObjectAnimator.ofFloat(contentB, "alpha", 0, 1);
+        b2.setDuration(a2.getDuration());
+        b2.setInterpolator(null);
+        b2.setRepeatCount(ValueAnimator.INFINITE);
+        b2.setRepeatMode(ValueAnimator.REVERSE);
+        b2.start();
+
+        return frame;
+    }
+
 
 }

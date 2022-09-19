@@ -46,7 +46,7 @@ public class OpenModule extends AModuleData {
     }
 
     @Override
-    public boolean canBeDisabled() {
+    public boolean showDecorations() {
         return false;
     }
 

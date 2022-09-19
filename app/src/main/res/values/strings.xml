@@ -1,6 +1,5 @@
 <resources>
     <!-- main -->
-    <string name="app_name">Url checker</string>
     <string name="txt_info">This app acts as an intermediate step towards opening url links. When you click on a link and choose this app to open it, it will show a dialog with some information about the link. Press the module button below to check and configure all available modules.</string>
     <string name="txt_sample">Press the link below to test it:</string>
     <string name="a_modules">Modules</string>
@@ -59,8 +58,7 @@ Note: if you edit the patterns, new built-in patterns from app updates will not 
     <string name="mOpen_desc">"Contains the following buttons (left to right):
 - Custom Tabs button: toggle to enable/disable the custom tab feature. When enabled the browser should be opened in a 'lite' mode.
 - Open button: Press the app name to open the link on that app. If a link can be opened with multiple apps, an arrow will be shown to let you choose.
-- Share button: Press the button to share the link. Long press to quickly copy to clipboard.
-This module can't be disabled."</string>
+- Share button: Press the button to share the link. Long press to quickly copy to clipboard."</string>
     <string name="mOpen_ctabsSetting">Custom tabs:</string>
     <string name="mOpen_ctabsOn">Enabled by default</string>
     <string name="mOpen_ctabsOff">Disabled by default</string>
@@ -102,8 +100,7 @@ The url content is obtained (GET), but not evaluated, so redirections based on j
     <string name="mStatus_redir">Redirect</string>
 
     <string name="mInput_name">Input text</string>
-    <string name="mInput_desc">"Displays the current url, which can be edited manually.
-Can't be disabled."</string>
+    <string name="mInput_desc">"Displays the current url, which can be edited manually."</string>
 
     <string name="mVT_name">Url Scanner</string>
     <string name="mVT_desc">"When this module is enabled you can scan the url using VirusTotal and check the report.
@@ -153,7 +150,10 @@ If you enable this it will display the received intent as uri, useful for develo
     <string name="mClear_hashHint">No hash check</string>
     <string name="mClear_updateNow">Update now</string>
     <string name="mClear_autoUpdate">Update periodically</string>
+    <string name="mClear_lastCheck">Last check:</string>
+    <string name="mClear_lastUpdate">Last update:</string>
     <string name="mClear_updated">Catalog updated</string>
+    <string name="mClear_upToDate">Catalog up to date</string>
     <string name="mClear_urlError">Unable to fetch the rules, make sure the url is valid and you have an active connection</string>
     <string name="mClear_hashError">Unable to fetch the hash, make sure the url is valid and you have an active connection</string>
     <string name="mClear_hashMismatch">Hashes do not match, the file may have been tampered with. If you want to skip the check remove the hash url</string>
@@ -173,7 +173,7 @@ Thanks to PabloOQ for the idea and original implementation!"</string>
     <string name="mRemove_empty">Remove empty</string>
 
     <string name="mLog_name">Log</string>
-    <string name="mLog_desc">"This module logs all checked urls, it is recommended that it is the first module in the list (otherwise automatic redirections may not be logged).
+    <string name="mLog_desc">"This module logs all checked urls.
 You can view, clear or edit the full log here, no visual indication will appear on the main dialog.
 To disable logging, just disable the module."</string>
     <string name="mLog_view">View log</string>
