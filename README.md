@@ -4,8 +4,9 @@
 <img src="./app/src/main/play/listings/en-US/graphics/feature-graphic/featured.png">
 <!-- Original background with CC0 from https://www.maxpixel.net/Digital-Network-Internet-Communication-Connections-3537400 -->
 
-# URLCheck
-### Android app made by [TrianguloY](https://github.com/TrianguloY)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Roboto+seriff&size=40&pause=1000&color=8D56F7&center=true&vCenter=true&width=800&height=75&lines=UrlCheck;An+android+app+made+by+TrianguloY)](https://git.io/typing-svg)
+<!-- Created with: https://github.com/DenverCoder1/readme-typing-svg and https://readme-typing-svg.demolab.com/demo/ //❤️ Thanks! ❤️//  -->
+
 Contributions: [Ilithy](https://github.com/Ilithy), [PabloOQ](https://github.com/PabloOQ) \
 Translations: [Tiago Carmo](https://github.com/ReduxFlakes), [Ilithy](https://github.com/Ilithy), Idris, [Metezd](https://github.com/metezd), Nhman Mazuz
 
@@ -21,6 +22,7 @@ Translations: [Tiago Carmo](https://github.com/ReduxFlakes), [Ilithy](https://gi
 [![GitHub last commit](https://img.shields.io/github/last-commit/TrianguloY/UrlChecker)](https://github.com/TrianguloY/UrlChecker/commits)  
 [![Codacy Security Scan](https://github.com/TrianguloY/UrlChecker/actions/workflows/codacy.yml/badge.svg?branch=master)](https://github.com/TrianguloY/UrlChecker/actions/workflows/codacy.yml)
 [![CodeQL](https://github.com/TrianguloY/UrlChecker/actions/workflows/codeql-analysis.yml/badge.svg?branch=master)](https://github.com/TrianguloY/UrlChecker/actions/workflows/codeql-analysis.yml)
+[![Validate gradle build test](https://github.com/TrianguloY/UrlChecker/actions/workflows/validate-gradle-build-test.yml/badge.svg?branch=master)](https://github.com/TrianguloY/UrlChecker/actions/workflows/validate-gradle-build-test.yml)
 
 
 </div>
