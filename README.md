@@ -35,7 +35,10 @@ alt="Get it on F-Droid"
 height="80">](https://f-droid.org/packages/com.trianguloy.urlchecker)
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
 alt="Get it on Google Play"
-height="80">](https://play.google.com/store/apps/details?id=com.trianguloy.urlchecker) 
+height="80">](https://play.google.com/store/apps/details?id=com.trianguloy.urlchecker)
+[<img src="https://github.com/Ilithy/Ilithy/blob/main/Art/get-it-on-APK_Pure.png"
+alt="Get it on APK Pure"
+height="80">](https://m.apkpure.com/url-checker/com.trianguloy.urlchecker)
 </div>
 <!-- <details><summary><h4>links</h4></summary>
 
@@ -80,7 +83,7 @@ facilitating link sharing, protecting against certain phishing techniques and ma
 
 **All help is greatly welcomed!**  
 Feel free to **suggest changes**, create [**issues**](https://github.com/TrianguloY/UrlChecker/issues/new) or even [**pull request**](https://help.github.com/articles/about-pull-requests/). _(from a simple typo fix to a full new module or even more!)_  
-Translations are also greatly appreciated.
+**Translations are also greatly appreciated.**
 
 See [CONTRIBUTING](CONTRIBUTING.md) for code or translation details and tips.
 
