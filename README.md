@@ -4,7 +4,7 @@
 <img src="./app/src/main/play/listings/en-US/graphics/feature-graphic/featured.png">
 <!-- Original background with CC0 from https://www.maxpixel.net/Digital-Network-Internet-Communication-Connections-3537400 -->
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Roboto+seriff&size=40&pause=1000&color=8D56F7&center=true&vCenter=true&width=800&height=75&lines=UrlCheck;An+android+app+made+by+TrianguloY)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Roboto+seriff&size=40&pause=1000&color=8D56F7&center=true&vCenter=true&width=800&height=75&lines=URLCheck;An+android+app+made+by+TrianguloY)](https://git.io/typing-svg)
 <!-- Created with: https://github.com/DenverCoder1/readme-typing-svg and https://readme-typing-svg.demolab.com/demo/ //❤️ Thanks! ❤️//  -->
 
 Contributions: [Ilithy](https://github.com/Ilithy), [PabloOQ](https://github.com/PabloOQ) \
