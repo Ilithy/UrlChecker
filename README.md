@@ -24,7 +24,6 @@ Translations: [Tiago Carmo](https://github.com/ReduxFlakes), [Ilithy](https://gi
 [![CodeQL](https://github.com/TrianguloY/UrlChecker/actions/workflows/codeql-analysis.yml/badge.svg?branch=master)](https://github.com/TrianguloY/UrlChecker/actions/workflows/codeql-analysis.yml)
 [![Validate gradle build test](https://github.com/TrianguloY/UrlChecker/actions/workflows/validate-gradle-build-test.yml/badge.svg?branch=master)](https://github.com/TrianguloY/UrlChecker/actions/workflows/validate-gradle-build-test.yml)
 
-
 </div>
 
 <!-- ---------- Download ---------- -->
