@@ -104,4 +104,4 @@ You can use parts of this project in your own ones, or upload modified versions 
 **How to credit:**
 
 - You must add my nick [TrianguloY](https://github.com/TrianguloY/) in an `about` or `acknowledgments` section visible to the user.
-- You must add a link to this GitHub main page **https://github.com/TrianguloY/UrlChecker** or subpage (if you used a part of the code or an asset) in an `about` or `acknowledgments` section visible to the user.
+- You must add a link to this GitHub main page **https://github.com/TrianguloY/UrlChecker** or subpage _(if you used a part of the code or an asset)_ in an `about` or `acknowledgments` section visible to the user.
