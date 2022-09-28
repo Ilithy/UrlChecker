@@ -16,9 +16,9 @@
 
 [![GitHub version (gradle versionName)](https://img.shields.io/badge/dynamic/json?label=Latest%20version&color=white&query=version&url=https%3A%2F%2Fgithub.com%2FTrianguloY%2FUrlChecker%2Freleases%2Fdownload%2Flatest%2Fshields.json)](https://github.com/TrianguloY/UrlChecker/blob/master/app/build.gradle)
 [![F-Droid](https://img.shields.io/f-droid/v/com.trianguloy.urlchecker?label=F-Droid%20version)](https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/com.trianguloy.urlchecker.yml)
-[![PlayShields](https://img.shields.io/endpoint?color=green&url=https%3A%2F%2Fplayshields.herokuapp.com%2Fplay%3Fi%3Dcom.trianguloy.urlchecker%26l%3DPlay%2520Store%2520version%26m%3Dv%24version)](https://play.google.com/store/apps/details?id=com.trianguloy.urlchecker)  
+[![PlayShields](https://img.shields.io/endpoint?color=green&url=https%3A%2F%2Fplayshields.herokuapp.com%2Fplay%3Fi%3Dcom.trianguloy.urlchecker%26l%3DPlay%2520Store%2520version%26m%3Dv%24version)](https://play.google.com/store/apps/details?id=com.trianguloy.urlchecker) \
 [![App-Code Size](https://img.shields.io/github/languages/code-size/trianguloy/urlchecker.svg?label=Code%20size)](https://api.github.com/repos/TrianguloY/UrlChecker)
-[![GitHub last commit](https://img.shields.io/github/last-commit/TrianguloY/UrlChecker)](https://github.com/TrianguloY/UrlChecker/commits)  
+[![GitHub last commit](https://img.shields.io/github/last-commit/TrianguloY/UrlChecker)](https://github.com/TrianguloY/UrlChecker/commits) \
 [![Codacy Security Scan](https://github.com/TrianguloY/UrlChecker/actions/workflows/codacy.yml/badge.svg?branch=master)](https://github.com/TrianguloY/UrlChecker/actions/workflows/codacy.yml)
 [![CodeQL](https://github.com/TrianguloY/UrlChecker/actions/workflows/codeql-analysis.yml/badge.svg?branch=master)](https://github.com/TrianguloY/UrlChecker/actions/workflows/codeql-analysis.yml)
 [![Validate gradle build test](https://github.com/TrianguloY/UrlChecker/actions/workflows/validate-gradle-build-test.yml/badge.svg?branch=master)](https://github.com/TrianguloY/UrlChecker/actions/workflows/validate-gradle-build-test.yml)
@@ -49,7 +49,7 @@ height="80">](https://m.apkpure.com/url-checker/com.trianguloy.urlchecker)
 
 **URLCheck** acts as an intermediary when opening url links, allowing, among other things:  
 to remove trackers, affiliate links, unnecessary elements,  
-facilitating link sharing, protecting against certain phishing techniques and many more...
+facilitating link holding and sharing, protecting against certain phishing techniques and many more...
 
 </div>
 
