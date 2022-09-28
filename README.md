@@ -87,8 +87,8 @@ See [CONTRIBUTING](CONTRIBUTING.md) for code or translation details and tips.
 
 ### Contributors
 
-* Code Contributors: [PabloOQ](https://github.com/PabloOQ) \
-* General Contributors: [Ilithy](https://github.com/Ilithy), [PabloOQ](https://github.com/PabloOQ) \
+* Code Contributors: [PabloOQ](https://github.com/PabloOQ)
+* General Contributors: [Ilithy](https://github.com/Ilithy), [PabloOQ](https://github.com/PabloOQ)
 * Translators: [Tiago Carmo](https://github.com/ReduxFlakes), [Ilithy](https://github.com/Ilithy), Idris, [Metezd](https://github.com/metezd), Nhman Mazuz
 
 <!-- ---------- License ---------- -->
