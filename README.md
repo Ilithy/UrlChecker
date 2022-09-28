@@ -9,9 +9,6 @@
 <!-- [![Typing SVG](https://readme-typing-svg.demolab.com?font=Roboto+seriff&size=40&pause=1000&color=8D56F7&center=true&vCenter=true&width=800&height=75&lines=URLCheck;An+android+app+made+by+TrianguloY)](https://git.io/typing-svg)
    Created with: https://github.com/DenverCoder1/readme-typing-svg and https://readme-typing-svg.demolab.com/demo/ //❤️ Thanks! ❤️//  -->
 
-Contributions: [Ilithy](https://github.com/Ilithy), [PabloOQ](https://github.com/PabloOQ) \
-Translations: [Tiago Carmo](https://github.com/ReduxFlakes), [Ilithy](https://github.com/Ilithy), Idris, [Metezd](https://github.com/metezd), Nhman Mazuz
-
 </div>
 
 <!-- ---------- Badges ---------- -->
@@ -80,13 +77,19 @@ facilitating link sharing, protecting against certain phishing techniques and ma
 </div>
 
 <!-- ---------- Contribution ---------- -->
-## Contribution
+## Contribute
 
 **All help is greatly welcomed!**  
 Feel free to **suggest changes**, create [**issues**](https://github.com/TrianguloY/UrlChecker/issues/new) or even [**pull request**](https://help.github.com/articles/about-pull-requests/). _(from a simple typo fix to a full new module or even more!)_  
 **Translations are also greatly appreciated.**
 
 See [CONTRIBUTING](CONTRIBUTING.md) for code or translation details and tips.
+
+### Contributors
+
+Code Contributions: [PabloOQ](https://github.com/PabloOQ) \
+General Contributions: [Ilithy](https://github.com/Ilithy), [PabloOQ](https://github.com/PabloOQ) \
+Translations: [Tiago Carmo](https://github.com/ReduxFlakes), [Ilithy](https://github.com/Ilithy), Idris, [Metezd](https://github.com/metezd), Nhman Mazuz
 
 <!-- ---------- License ---------- -->
 
