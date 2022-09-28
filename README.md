@@ -76,7 +76,7 @@ facilitating link holding and sharing, protecting against certain phishing techn
 </p>
 </div>
 
-<!-- ---------- Contribution ---------- -->
+<!-- ---------- Contribution & Contributor ---------- -->
 ## Contribute
 
 **All help is greatly welcomed!**  
@@ -87,9 +87,9 @@ See [CONTRIBUTING](CONTRIBUTING.md) for code or translation details and tips.
 
 ### Contributors
 
-Code Contributions: [PabloOQ](https://github.com/PabloOQ) \
-General Contributions: [Ilithy](https://github.com/Ilithy), [PabloOQ](https://github.com/PabloOQ) \
-Translations: [Tiago Carmo](https://github.com/ReduxFlakes), [Ilithy](https://github.com/Ilithy), Idris, [Metezd](https://github.com/metezd), Nhman Mazuz
+* Code Contributors: [PabloOQ](https://github.com/PabloOQ) \
+* General Contributors: [Ilithy](https://github.com/Ilithy), [PabloOQ](https://github.com/PabloOQ) \
+* Translators: [Tiago Carmo](https://github.com/ReduxFlakes), [Ilithy](https://github.com/Ilithy), Idris, [Metezd](https://github.com/metezd), Nhman Mazuz
 
 <!-- ---------- License ---------- -->
 
