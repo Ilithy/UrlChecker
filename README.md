@@ -47,6 +47,8 @@ height="80">](https://m.apkpure.com/url-checker/com.trianguloy.urlchecker)
 
   - Google Play: https://play.google.com/store/apps/details?id=com.trianguloy.urlchecker  
   - FDroid: https://f-droid.org/packages/com.trianguloy.urlchecker/
+  - APK Pure: https://m.apkpure.com/url-checker/com.trianguloy.urlchecker
+
 </details> -->
 
 <!-- ---------- Description ---------- -->
