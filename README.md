@@ -84,13 +84,7 @@ facilitating link holding and sharing, protecting against certain phishing techn
 </div>
 
 <!-- ---------- Contribution & Contributor ---------- -->
-## Contribute <p align="right">
-<img 
-    src="https://github.com/Ilithy/Ilithy/blob/8854b518f5c619c85234a6cafc3f11e3932a9e97/Art/Thanks-contributors.gif" 
-    height="150">
-<img 
-</p>
-</div>
+## Contribute
 
 **All help is greatly welcomed!**  
 Feel free to **suggest changes**, create [**issues**](https://github.com/TrianguloY/UrlChecker/issues/new) or even [**pull request**](https://help.github.com/articles/about-pull-requests/). _(from a simple typo fix to a full new module or even more!)_  
