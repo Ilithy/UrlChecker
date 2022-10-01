@@ -1,18 +1,17 @@
-
+# see https://github.com/actions/labeler
+# for more informations
 
 # Add 'assets' label to any assets file changes within the source dir
 Assets:
-- app/src/main/assets
+- app/src/main/assets/**/*
 
 # Add 'Github' label to any git file changes within the source dir
 Github:
-- app/src/main/assets
-
+- .github/**/*
 
 # Add 'Core' label to any change within the 'core' package
 Core:
-- app/src/main/java/com/trianguloy/urlchecker/
-
+- app/src/main/java/com/trianguloy/urlchecker/**/*
 
 # Add 'Ongoing translation' label to any change to strings.xml files
 Ongoing translation:
