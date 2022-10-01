@@ -88,7 +88,7 @@ facilitating link holding and sharing, protecting against certain phishing techn
 ## Contribute
 
 **All help is greatly welcomed!**  
-Feel free to **suggest changes**, create [**issues**](https://github.com/TrianguloY/UrlChecker/issues/new) or even [**pull request**](https://help.github.com/articles/about-pull-requests/). _(from a simple typo fix to a full new module or even more!)_
+Feel free to **suggest changes**, create [**issues**](https://github.com/TrianguloY/UrlChecker/issues/new/choose) or even [**pull request**](https://help.github.com/articles/about-pull-requests/). _(from a simple typo fix to a full new module or even more!)_
 
 **Translations are also greatly appreciated.** \
 URLCheck is already translated in English, French, Hebrew, Spanish, Portuguese, Turkish and Ukrainian \
