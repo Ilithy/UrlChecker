@@ -1,6 +1,7 @@
 # Set update schedule for GitHub Actions
 # Copied from https://docs.github.com/en/code-security/dependabot/working-with-dependabot/keeping-your-actions-up-to-date-with-dependabot#example-dependabotyml-file-for-github-actions
 
+
 version: 2
 updates:
 
@@ -9,4 +10,6 @@ updates:
     schedule:
       # Check for updates to GitHub Actions every weekday
       interval: "daily"
+
+
 
