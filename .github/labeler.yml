@@ -9,12 +9,21 @@ Core:
 
 # Add 'Ongoing translation' label to any change to strings.xml files EXCEPT for the en-US sub-folder
 Ongoing translation:
-- any: ['src/**/strings.xml', '!app/src/main/res/values/*']
+- any: ['app/src/main/res/**/strings.xml', '!app/src/main/res/values/*']
 # - src/**/strings.xml
 
-# Add 'fr-rFR' label to any change to french strings.xml file
+# Add language code label to any change to specific strings.xml files
+es-ES:
+
+- app/src/main/res/values-es/strings.xml
+
+
+
 fr-rFR:
 - app/src/main/res/values-fr-rFR/strings.xml
+
+
+
 
 # Add 'source' label to any change to src files within the source dir EXCEPT for the docs sub-folder
 # source:
