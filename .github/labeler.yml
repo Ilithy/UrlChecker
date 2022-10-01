@@ -13,6 +13,14 @@ Github:
 Core:
 - app/src/main/java/com/trianguloy/urlchecker/**/*
 
+# Add 'Store file' label to any change within the 'play' folder and subfolder(s)
+Store file:
+- app/src/main/play/**/*
+
+# Add 'Gradle wrapper' label to any change within the 'gradle' folder and subfolder
+Gradle wrapper:
+- gradle/wrapper/**/*
+
 # Add 'Ongoing translation' label to any change to strings.xml files
 Ongoing translation:
 - app/src/main/res/values-es/strings.xml
@@ -21,7 +29,6 @@ Ongoing translation:
 - app/src/main/res/values-pt-rPT/strings.xml
 - app/src/main/res/values-tr/strings.xml
 - app/src/main/res/values-uk/strings.xml
-
 
 # Add language code label to any change to specific strings.xml files
 es-ES:
