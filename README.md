@@ -93,7 +93,7 @@ Feel free to **suggest changes**, create [**issues**](https://github.com/Triangu
 
 **Translations are also greatly appreciated.** \
 URLCheck is already translated in English, French, Hebrew, Spanish, Portuguese, Turkish and Ukrainian \
-Do not hesitate to **check** the [**pre-existing translations**](https://github.com/TrianguloY/UrlChecker/tree/master/app/src/main/res).
+Do not hesitate to **check** and **update** the [**pre-existing translations**](https://github.com/TrianguloY/UrlChecker/tree/master/app/src/main/res).
 
 See [**CONTRIBUTING**](CONTRIBUTING.md) for code or translation details and tips.
 
