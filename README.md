@@ -32,7 +32,7 @@
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
 alt="Get it on F-Droid"
 height="80">](https://f-droid.org/packages/com.trianguloy.urlchecker)
-<!-- --Not yet ready for public use:--
+  <!-- --Not yet ready for public use:--
 [<img src="https://accrescent.app/badges/get-it-on.png"
 alt="Get it on Accrescent"
 height="80">](com.example.app) -->
@@ -42,6 +42,7 @@ height="80">](https://play.google.com/store/apps/details?id=com.trianguloy.urlch
 [<img src="https://github.com/Ilithy/Ilithy/blob/main/Art/get-it-on-APK_Pure.png"
 alt="Get it on APK Pure"
 height="80">](https://m.apkpure.com/url-checker/com.trianguloy.urlchecker)
+
 </div>
 <!-- <details><summary><h4>links</h4></summary>
 
@@ -87,10 +88,13 @@ facilitating link holding and sharing, protecting against certain phishing techn
 ## Contribute
 
 **All help is greatly welcomed!**  
-Feel free to **suggest changes**, create [**issues**](https://github.com/TrianguloY/UrlChecker/issues/new) or even [**pull request**](https://help.github.com/articles/about-pull-requests/). _(from a simple typo fix to a full new module or even more!)_  
-**Translations are also greatly appreciated.**
+Feel free to **suggest changes**, create [**issues**](https://github.com/TrianguloY/UrlChecker/issues/new) or even [**pull request**](https://help.github.com/articles/about-pull-requests/). _(from a simple typo fix to a full new module or even more!)_
 
-See [CONTRIBUTING](CONTRIBUTING.md) for code or translation details and tips.
+**Translations are also greatly appreciated.** \
+URLCheck is already translated in English, French, Hebrew, Spanish, Portuguese, Turkish and Ukrainian \
+Do not hesitate to **check** the [**pre-existing translations**](https://github.com/TrianguloY/UrlChecker/tree/master/app/src/main/res).
+
+See [**CONTRIBUTING**](CONTRIBUTING.md) for code or translation details and tips.
 
 ### Contributors
 
@@ -110,9 +114,9 @@ height="40">](http://creativecommons.org/licenses/by/4.0/)
 
 </div>
 
-You can use parts of this project in your own ones, or upload modified versions of it AS LONG AS you credit me.
+You can use parts of this project in your own ones, or upload modified versions of it **AS LONG AS** you credit me.
 
 **How to credit:**
 
-- You must add my nick [TrianguloY](https://github.com/TrianguloY/) in an `about` or `acknowledgments` section visible to the user.
-- You must add a link to this GitHub main page **https://github.com/TrianguloY/UrlChecker** or subpage _(if you used a part of the code or an asset)_ in an `about` or `acknowledgments` section visible to the user.
+- You must add my nick [**TrianguloY**](https://github.com/TrianguloY/) in an `about` or `acknowledgments` section visible to the user.
+- You must add a link to this [**GitHub main page**](https://github.com/TrianguloY/UrlChecker) or subpage _(if you used a part of the code or an asset)_ in an `about` or `acknowledgments` section visible to the user.
