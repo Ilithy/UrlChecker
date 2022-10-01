@@ -13,20 +13,10 @@ Core:
 # Add 'Ongoing translation' label to any change to strings.xml files
 Ongoing translation:
 - app/src/main/res/values-es/strings.xml
-
-Ongoing translation:
 - app/src/main/res/values-fr-rFR/strings.xml
-
-Ongoing translation:
 - app/src/main/res/values-iw/strings.xml
-
-Ongoing translation:
 - app/src/main/res/values-pt-rPT/strings.xml
-
-Ongoing translation:
 - app/src/main/res/values-tr/strings.xml
-
-Ongoing translation:
 - app/src/main/res/values-uk/strings.xml
 
 
