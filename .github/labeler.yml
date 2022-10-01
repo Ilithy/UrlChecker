@@ -8,16 +8,25 @@ Assets:
 # Add 'Core' label to any change within the 'core' package
 Core:
 - app/src/main/java/com/trianguloy/urlchecker/
-# - package/core/**/*
 
 
-# Add 'Ongoing translation' label to any change to strings.xml files EXCEPT for the en-US sub-folder
+# Add 'Ongoing translation' label to any change to strings.xml files
 Ongoing translation:
 - app/src/main/res/values-es/strings.xml
+
+Ongoing translation:
 - app/src/main/res/values-fr-rFR/strings.xml
+
+Ongoing translation:
 - app/src/main/res/values-iw/strings.xml
+
+Ongoing translation:
 - app/src/main/res/values-pt-rPT/strings.xml
+
+Ongoing translation:
 - app/src/main/res/values-tr/strings.xml
+
+Ongoing translation:
 - app/src/main/res/values-uk/strings.xml
 
 
@@ -39,14 +48,3 @@ tr-TR
 
 uk-UA
 - app/src/main/res/values-uk/strings.xml
-
-
-# Add 'source' label to any change to src files within the source dir EXCEPT for the docs sub-folder
-# source:
-# - any: ['src/**/*', '!src/docs/*']
-
-
-# Add 'frontend` label to any change to *.js files as long as the `main.js` hasn't changed
-# frontend:
-# - any: ['src/**/*.js']
-#  all: ['!src/main.js']
