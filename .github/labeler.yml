@@ -4,6 +4,10 @@
 Assets:
 - app/src/main/assets
 
+# Add 'Github' label to any git file changes within the source dir
+Github:
+- app/src/main/assets
+
 
 # Add 'Core' label to any change within the 'core' package
 Core:
