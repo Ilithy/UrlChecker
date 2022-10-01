@@ -13,7 +13,7 @@ Core:
 
 # Add 'Ongoing translation' label to any change to strings.xml files EXCEPT for the en-US sub-folder
 Ongoing translation:
-- any: ['app/src/main/res/**/strings.xml', '!app/src/main/res/values/*']
+- any: ['app/src/main/res/**/strings.xml', '!app/src/main/res/values/strings.xml']
 
 
 # Add language code label to any change to specific strings.xml files
