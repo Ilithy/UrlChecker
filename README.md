@@ -29,6 +29,10 @@
 <!-- ---------- Download ---------- -->
 <div align="center">
 
+<!-- --Not yet ready for public use:--
+[<img src="https://accrescent.app/badges/get-it-on.png"
+alt="Get it on Accrescent"
+height="80">](com.example.app) -->
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
 alt="Get it on F-Droid"
 height="80">](https://f-droid.org/packages/com.trianguloy.urlchecker)
@@ -39,10 +43,6 @@ height="80">](https://play.google.com/store/apps/details?id=com.trianguloy.urlch
 alt="Get it on APK Pure"
 height="80">](https://m.apkpure.com/url-checker/com.trianguloy.urlchecker)
 
-<!-- --Not yet ready for public use:--
-[<img src="https://accrescent.app/badges/get-it-on.png"
-alt="Get it on Accrescent"
-height="80">](com.example.app) -->
 </div>
 <!-- <details><summary><h4>links</h4></summary>
 
