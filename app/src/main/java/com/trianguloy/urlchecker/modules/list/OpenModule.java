@@ -5,6 +5,7 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,9 +22,9 @@ import com.trianguloy.urlchecker.modules.AModuleConfig;
 import com.trianguloy.urlchecker.modules.AModuleData;
 import com.trianguloy.urlchecker.modules.AModuleDialog;
 import com.trianguloy.urlchecker.modules.companions.CTabs;
+import com.trianguloy.urlchecker.modules.companions.LastOpened;
 import com.trianguloy.urlchecker.url.UrlData;
 import com.trianguloy.urlchecker.utilities.GenericPref;
-import com.trianguloy.urlchecker.utilities.LastOpened;
 import com.trianguloy.urlchecker.utilities.PackageUtilities;
 import com.trianguloy.urlchecker.utilities.UrlUtilities;
 
@@ -33,6 +34,14 @@ import java.util.List;
  * This module contains an open and share buttons
  */
 public class OpenModule extends AModuleData {
+
+    public static GenericPref.Bool CLOSEOPEN_PREF() {
+        return new GenericPref.Bool("open_closeopen", true);
+    }
+
+    public static GenericPref.Bool CLOSESHARE_PREF() {
+        return new GenericPref.Bool("open_closeshare", true);
+    }
 
     @Override
     public String getId() {
@@ -45,7 +54,7 @@ public class OpenModule extends AModuleData {
     }
 
     @Override
-    public boolean canBeDisabled() {
+    public boolean showDecorations() {
         return false;
     }
 
@@ -64,6 +73,9 @@ class OpenDialog extends AModuleDialog implements View.OnClickListener, PopupMen
 
     private LastOpened lastOpened;
 
+    private final GenericPref.Bool closeOpenPref = OpenModule.CLOSEOPEN_PREF();
+    private final GenericPref.Bool closeSharePref = OpenModule.CLOSESHARE_PREF();
+
     private final GenericPref.Enumeration<CTabs.Config> ctabsPref = CTabs.PREF();
     private boolean ctabs = false;
 
@@ -77,6 +89,8 @@ class OpenDialog extends AModuleDialog implements View.OnClickListener, PopupMen
     public OpenDialog(MainDialog dialog) {
         super(dialog);
         ctabsPref.init(dialog);
+        closeOpenPref.init(dialog);
+        closeSharePref.init(dialog);
     }
 
     @Override
@@ -94,16 +108,16 @@ class OpenDialog extends AModuleDialog implements View.OnClickListener, PopupMen
             btn_ctabs.setOnClickListener(this);
             btn_ctabs.setOnLongClickListener(this);
             switch (ctabsPref.get()) {
+                case AUTO:
+                default:
+                    // If auto we get it from the intent
+                    setCtabs(intent.hasExtra(CTabs.EXTRA));
+                    break;
                 case ON:
                     setCtabs(true);
                     break;
                 case OFF:
                     setCtabs(false);
-                    break;
-                case AUTO:
-                default:
-                    // If auto we get it from the intent
-                    setCtabs(intent.hasExtra(CTabs.EXTRA));
                     break;
                 case ENABLED:
                     // enable but hide
@@ -117,6 +131,7 @@ class OpenDialog extends AModuleDialog implements View.OnClickListener, PopupMen
                     break;
             }
         } else {
+            // not available, just ignore
             btn_ctabs.setVisibility(View.GONE);
         }
 
@@ -208,7 +223,7 @@ class OpenDialog extends AModuleDialog implements View.OnClickListener, PopupMen
         }
 
         // sort
-        lastOpened.sort(packages, getUrl());
+        lastOpened.sort(packages);
 
         // set
         btn_open.setText(getActivity().getString(R.string.mOpen_with, PackageUtilities.getPackageName(packages.get(0), getActivity())));
@@ -233,11 +248,12 @@ class OpenDialog extends AModuleDialog implements View.OnClickListener, PopupMen
      * @param index index from the packages list of the app to use
      */
     private void openUrl(int index) {
+        // get
         if (index < 0 || index >= packages.size()) return;
+        String chosen = packages.get(index);
 
-        // update chosen
-        String chosed = packages.get(index);
-        lastOpened.usedPackage(chosed, getUrl());
+        // update as preferred over the rest
+        lastOpened.prefer(chosen, packages);
 
         // open
         Intent intent = new Intent(getActivity().getIntent());
@@ -245,12 +261,10 @@ class OpenDialog extends AModuleDialog implements View.OnClickListener, PopupMen
             // preserve original VIEW intent
             intent.setData(Uri.parse(getUrl()));
             intent.setComponent(null);
-            intent.setPackage(chosed);
-
-
+            intent.setPackage(chosen);
         } else {
             // replace with new VIEW intent
-            intent = UrlUtilities.getViewIntent(getUrl(), chosed);
+            intent = UrlUtilities.getViewIntent(getUrl(), chosen);
         }
 
         if (ctabs && !intent.hasExtra(CTabs.EXTRA)) {
@@ -269,6 +283,10 @@ class OpenDialog extends AModuleDialog implements View.OnClickListener, PopupMen
         }
 
         PackageUtilities.startActivity(intent, R.string.toast_noApp, getActivity());
+
+        if (closeOpenPref.get()){
+            this.getActivity().finish();
+        }
     }
 
     /**
@@ -294,6 +312,9 @@ class OpenDialog extends AModuleDialog implements View.OnClickListener, PopupMen
                 R.string.mOpen_noapps,
                 getActivity()
         );
+        if (closeSharePref.get()){
+            this.getActivity().finish();
+        }
     }
 
     /**
@@ -301,11 +322,13 @@ class OpenDialog extends AModuleDialog implements View.OnClickListener, PopupMen
      */
     private void copyToClipboard() {
         ClipboardManager clipboard = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
-        ClipData clip = ClipData.newPlainText("", getUrl());
-        if (clipboard != null) {
-            clipboard.setPrimaryClip(clip);
+        if (clipboard == null) return;
+
+        clipboard.setPrimaryClip(ClipData.newPlainText("", getUrl()));
+
+        // show toast to notify it was copied (except on Android 13+, where the device shows a popup itself)
+        if (Build.VERSION.SDK_INT < /*Build.VERSION_CODES.TIRAMISU*/33)
             Toast.makeText(getActivity(), R.string.mOpen_clipboard, Toast.LENGTH_LONG).show();
-        }
     }
 
     /**
@@ -327,11 +350,15 @@ class OpenDialog extends AModuleDialog implements View.OnClickListener, PopupMen
 
 class OpenConfig extends AModuleConfig {
 
+    private final GenericPref.Bool closeOpenPref = OpenModule.CLOSEOPEN_PREF();
+    private final GenericPref.Bool closeSharePref = OpenModule.CLOSESHARE_PREF();
     private final GenericPref.Enumeration<CTabs.Config> ctabsPref = CTabs.PREF();
 
     public OpenConfig(ConfigActivity activity) {
         super(activity);
         ctabsPref.init(activity);
+        closeOpenPref.init(activity);
+        closeSharePref.init(activity);
     }
 
     @Override
@@ -346,6 +373,8 @@ class OpenConfig extends AModuleConfig {
 
     @Override
     public void onInitialize(View views) {
+        closeOpenPref.attachToCheckBox(views.findViewById(R.id.closeopen_pref));
+        closeSharePref.attachToCheckBox(views.findViewById(R.id.closeshare_pref));
         if (CTabs.isAvailable()) {
             ctabsPref.attachToSpinner(views.findViewById(R.id.ctabs_pref));
         } else {

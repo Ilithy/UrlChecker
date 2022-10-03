@@ -17,6 +17,7 @@ import com.trianguloy.urlchecker.utilities.AndroidUtils;
 import com.trianguloy.urlchecker.utilities.Animations;
 import com.trianguloy.urlchecker.utilities.GenericPref;
 import com.trianguloy.urlchecker.utilities.Inflater;
+import com.trianguloy.urlchecker.utilities.JavaUtilities;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -78,24 +79,17 @@ public class ConfigActivity extends Activity {
 
         // configure enable toggle
         Switch toggleEnable = parent.findViewById(R.id.enable);
-        if (module.canBeDisabled()) {
-            // allow disabling
-            final GenericPref.Bool enabled_pref = ModuleManager.getEnabledPrefOfModule(module, this);
-            toggleEnable.setChecked(enabled_pref.get());
-            toggleEnable.setOnCheckedChangeListener((buttonView, isChecked) -> {
-                if (isChecked && !config.canBeEnabled()) {
-                    Toast.makeText(ConfigActivity.this, R.string.toast_cantEnable, Toast.LENGTH_LONG).show();
-                    buttonView.setChecked(false);
-                } else {
-                    enabled_pref.set(isChecked);
-                }
-            });
-            switches.put(config, toggleEnable);
-        } else {
-            // disallow disabling
-            toggleEnable.setChecked(true);
-            toggleEnable.setEnabled(false);
-        }
+        final GenericPref.Bool enabled_pref = ModuleManager.getEnabledPrefOfModule(module, this);
+        toggleEnable.setChecked(enabled_pref.get());
+        toggleEnable.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked && !config.canBeEnabled()) {
+                Toast.makeText(ConfigActivity.this, R.string.toast_cantEnable, Toast.LENGTH_LONG).show();
+                buttonView.setChecked(false);
+            } else {
+                enabled_pref.set(isChecked);
+            }
+        });
+        switches.put(config, toggleEnable);
 
         // configure up/down buttons
         parent.findViewById(R.id.move_up).setOnClickListener(v -> moveModule(parent, -1));
@@ -127,7 +121,7 @@ public class ConfigActivity extends Activity {
     private void moveModule(View moduleView, int delta) {
         int position = list.indexOfChild(moduleView);
         if (position == -1) return; // no view? impossible
-        int newPosition = Math.min(Math.max(0, position + delta), list.getChildCount() - 1); // clamp
+        int newPosition = JavaUtilities.clamp(0, position + delta, list.getChildCount() - 1);
         if (newPosition == position) return; // same position? just ignore
 
         // swap
