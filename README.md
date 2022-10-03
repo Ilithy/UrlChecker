@@ -31,13 +31,13 @@
 
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
 alt="Get it on F-Droid"
-height="50">](https://f-droid.org/packages/com.trianguloy.urlchecker)
+height="75">](https://f-droid.org/packages/com.trianguloy.urlchecker)
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
 alt="Get it on Google Play"
-height="50">](https://play.google.com/store/apps/details?id=com.trianguloy.urlchecker)
+height="75">](https://play.google.com/store/apps/details?id=com.trianguloy.urlchecker)
 [<img src="https://github.com/Ilithy/Ilithy/blob/main/Art/get-it-on-APK_Pure.png"
 alt="Get it on APK Pure"
-height="50">](https://m.apkpure.com/url-checker/com.trianguloy.urlchecker)
+height="75">](https://m.apkpure.com/url-checker/com.trianguloy.urlchecker)
 
 </div>
 <!-- <details><summary><h4>links</h4></summary>
