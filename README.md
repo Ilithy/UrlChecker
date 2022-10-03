@@ -39,12 +39,9 @@ height="75">](https://play.google.com/store/apps/details?id=com.trianguloy.urlch
 alt="Get it on APK Pure"
 height="75">](https://m.apkpure.com/url-checker/com.trianguloy.urlchecker)
 <!-- --Not yet ready for public use:--
-
 [<img src="https://accrescent.app/badges/get-it-on.png"
-
 alt="Get it on Accrescent"
-
-height="50">](com.example.app) -->
+height="75">](https://accrescent.com.example.app) -->
 
 </div>
 <!-- <details><summary><h4>links</h4></summary>
@@ -52,7 +49,7 @@ height="50">](com.example.app) -->
   - Google Play: https://play.google.com/store/apps/details?id=com.trianguloy.urlchecker  
   - FDroid: https://f-droid.org/packages/com.trianguloy.urlchecker/
   - APK Pure: https://m.apkpure.com/url-checker/com.trianguloy.urlchecker
-
+Not yet ready for public use:- Accrescent: https://accrescent.com.example.app
 </details> -->
 
 <!-- ---------- Description ---------- -->
