@@ -29,4 +29,4 @@ jobs:
         asset_name: URLCheck.apk
         tag: ${{ github.ref }}
         overwrite: true
-        body: "URLCheck.apk Release"
+        body: "URLCheck app release"
