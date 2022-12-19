@@ -27,18 +27,18 @@ jobs:
         run: chmod +x gradlew
 
 #     - name: Lint
-#       run: ./gradlew urlChecker:lint
+#       run: ./gradlew UrlChecker:lint
 
       - name: Test
-        run: ./gradlew urlChecker:test
+        run: ./gradlew UrlChecker:test
 
       - name: Build library
-        run: ./gradlew urlChecker:assembleRelease
+        run: ./gradlew UrlChecker:assembleRelease
 
 #      - name: Save library to artifacts
 #        uses: actions/upload-artifact@v2
 #        with:
-#          path: urlChecker/build/outputs/aar/*
+#          path: UrlChecker/build/outputs/aar/*
 
       - name: Build App
         run: ./gradlew app:assembleRelease
@@ -76,7 +76,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./urlChecker/build/outputs/aar/URLCheck-release.aar
+          asset_path: ./UrlChecker/build/outputs/aar/URLCheck-release.aar
           asset_name: URLCheck-release.aar
           # Common MIME types:https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
           asset_content_type: application/zip
