@@ -30,7 +30,7 @@ jobs:
 #       run: ./gradlew UrlChecker:lint
 
       - name: Test
-        run: ./gradlew UrlChecker:test
+        run: ./gradlew :test
 
       - name: Build library
         run: ./gradlew UrlChecker:assembleRelease
