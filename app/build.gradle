@@ -28,11 +28,25 @@ android {
 
     }
 
+    def releaseFile = rootProject.file("./release.properties")
+    def properties = new Properties()
+    properties.load(new FileInputStream(releaseFile))
+
+    signingConfigs {
+        release {
+            storeFile file(properties['storeFile'])
+            storePassword properties['storePassword']
+            keyAlias properties['keyAlias']
+            keyPassword properties['keyPassword']
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
         alpha {
             initWith(buildTypes.debug)
