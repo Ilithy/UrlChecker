@@ -45,3 +45,4 @@ jobs:
         tag: ${{ github.ref }}
         overwrite: true
         body: "URLCheck app release"
+
