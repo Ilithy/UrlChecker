@@ -4,7 +4,7 @@ labels: [question]
 body:
 
   - type: textarea
-    id: Operation_related-question
+    id: operation_related-question
     attributes:
       label: Please state your question related to the operation of URLCheck.
       description: How work URLCheck
@@ -63,7 +63,3 @@ body:
         - label: I will fill out all of the requested information in this form.
           required: true
 
-
-
-## Ask a question relating to the functioning or use of URLCheck
- <!-- remove this item before asking the question -->
