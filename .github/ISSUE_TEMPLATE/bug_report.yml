@@ -1,4 +1,4 @@
-name: 🐞 Bug Report
+name: Bug Report
 description: Report an issue in the app
 labels: [bug]
 body:
@@ -41,7 +41,7 @@ body:
     attributes:
       label: URLCheck version
       description: |
-        You can find your URLCheck version in **About**.
+        You can find your URLCheck version in **About** section.
       placeholder: |
         Example: "2.9.1"
     validations:
@@ -52,9 +52,20 @@ body:
     attributes:
       label: Android version
       description: |
-        You can find this somewhere in your Android settings.
+        You can find this somewhere in **About** section of your Android settings.
       placeholder: |
         Example: "Android 12"
+    validations:
+      required: true
+
+  - type: input
+    id: android-rom
+    attributes:
+      label: Android Custom/Specific ROM
+      description: |
+        You can find this somewhere in **About** section of your Android settings.
+      placeholder: |
+        Example: "EMUI, MIUI, GrapheneOS, LineageOS, CalyxOS etc..."
     validations:
       required: true
 
