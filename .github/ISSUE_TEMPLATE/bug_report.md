@@ -1,36 +1,79 @@
----
-name: Bug report
-about: Create a bug report to help us improve URLCheck
-title: ''
-labels: bug
-assignees: ''
+name: 🐞 Bug Report
+description: Report an issue in the app
+labels: [bug]
+body:
 
----
+  - type: textarea
+    id: reproduce-steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide an example of the issue.
+      placeholder: |
+        Example:
+          1. First step
+          2. Second step
+          3. Issue here
+    validations:
+      required: true
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      placeholder: |
+        Example:
+          "This should happen..."
+    validations:
+      required: true
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '...'
-3. Scroll down to '...'
-4. Look at '...'
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual behavior
+      placeholder: |
+        Example:
+          "This happened instead..."
+    validations:
+      required: true
 
-**Current behaviour**
-A clear and concise description of what currently happens, and you don't expect it to happen.
+  - type: input
+    id: URLCheck-version
+    attributes:
+      label: URLCheck version
+      description: |
+        You can find your URLCheck version in **About**.
+      placeholder: |
+        Example: "2.9.1"
+    validations:
+      required: true
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+  - type: input
+    id: android-version
+    attributes:
+      label: Android version
+      description: |
+        You can find this somewhere in your Android settings.
+      placeholder: |
+        Example: "Android 12"
+    validations:
+      required: true
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+  - type: textarea
+    id: other-details
+    attributes:
+      label: Other details
+      placeholder: |
+        Additional details and attachments.
 
-**System Info (please complete the following information):**
- - Device: _[e.g. Samsung galaxy S21]_
- - Android OS version: _[e.g. 12]_
- - URLCheck version: _[e.g. 2.5]_
- - Browser: _[e.g. Chrome, Opera]_
-
-**Additional context**
-Add any other context about the problem here.
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: Acknowledgements
+      description: Your issue will be closed if you haven't done these steps.
+      options:
+        - label: I have searched the existing issues and this is a new ticket, **NOT** a duplicate or related to another open issue.
+          required: true
+        - label: I have written a short but informative title.
+          required: true
+        - label: I will fill out all of the requested information in this form.
+          required: true
