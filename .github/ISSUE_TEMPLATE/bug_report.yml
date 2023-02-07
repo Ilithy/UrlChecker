@@ -83,7 +83,8 @@ body:
       label: Acknowledgements
       description: Your issue will be closed if you haven't done these steps.
       options:
-        - label: the opening of this issue is not related to a question about the operation, use or other peripheral elements of URLCheck, if so, please ask your question **here** https://github.com/TrianguloY/UrlChecker/discussions/new/choose.
+        - label: the opening of this issue is not related to a question about the operation, use or other peripheral elements of URLCheck. If so please ask your question in discussion section.
+          https://github.com/TrianguloY/UrlChecker/discussions/new/choose
           required: true
         - label: I have searched the existing issues and this is a new ticket, **NOT** a duplicate or related to another open issue.
           required: true
